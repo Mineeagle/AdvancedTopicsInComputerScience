@@ -10,7 +10,7 @@ class OSMConnector:
         dist=1000,
         simplify=True,
         network_type="drive",
-    ) -> None:
+    ):
         """
         This class is the connection to OpenStreetMaps (OSM).
         It allows to easily get the shortest distance / the fastest travel time needed between to coordinates.
@@ -22,7 +22,7 @@ class OSMConnector:
             Please note though, that should the variables like location_coordinates change, this file has to be deleted manually.
         dist: int => the amount of distance in meters around the location coordinates
         simplify: bool => should the graph be simplified? makes it less accurate, but also faster
-        network_type: str => mode of transportation        
+        network_type: str => mode of transportation
         """
         assert graph_file_path.endswith(".graphml")
         "The graph file path is invalid and needs to end with '.graphml"
