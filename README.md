@@ -1,2 +1,2 @@
 # AdvancedTopicsInComputerScience
-This repo contains some for for a module in university.
+This repo contains some stuff for a module in university.
