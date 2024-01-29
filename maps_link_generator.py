@@ -7,7 +7,7 @@ class MapsLinksGenerator:
             result_link += "&waypoints="
             for waypoint in waypoints:
                 result_link += f"{waypoint[0]},{waypoint[1]}|"
-                result_link = result_link[:-1]
+            result_link = result_link[:-1]
         result_link += f"&destination={start_end_location[0]},{start_end_location[1]}"
 
         return result_link
