@@ -14,7 +14,7 @@ class RoutePlanning:
         Please make the import parameter 'kippmuehle' your starting
         and endpoint (coordinates again)
         """
-        self.osm_connected = self._get_osm_graph_connector()
+        self.osm_connector = self._get_osm_graph_connector()
         self.kippemuehle = kippemuehle
 
     def get_google_maps_link(self):
@@ -57,7 +57,7 @@ class RoutePlanning:
             result_list = []
             for sub_container in coordinates:
                 result_time = int(
-                    self.osm_connected.get_fastest_time_in_seconds(
+                    self.osm_connector.get_fastest_time_in_seconds(
                         container, sub_container
                     )
                 )
