@@ -8,5 +8,6 @@
     "simplify": false,
     "network_type": "drive",
     "central_lcoation_lat": 50.991172,
-    "central_lcoation_lon": 7.123864
+    "central_lcoation_lon": 7.123864,
+    "last_response": "<Response [200]>"
 }

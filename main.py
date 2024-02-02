@@ -3,18 +3,20 @@ import requests
 from link_sender import LinkSender
 import json
 
+
 def main():
 
-    path = "/home/fawn/Root/dev/advanced_topics_in_cs/AdvancedTopicsInComputerScience/config.json"
-    with open(path, "r") as json_file:
+    PATH = "/home/fawn/Root/dev/advanced_topics_in_cs/AdvancedTopicsInComputerScience/config.json"
+    with open(PATH, "r") as json_file:
         config_dict = json.load(json_file)
-    
 
     rp = RoutePlanning(config_dict)
     link = rp.get_google_maps_link()
-    print(LinkSender.send_link(config_dict, link))
-    print(link)
-    
+    config_dict["last_response"] = str(LinkSender.send_link(config_dict, link))
+
+    with open(PATH, "w") as json_file:
+        json.dump(config_dict, json_file, indent=4)
+
 
 if __name__ == "__main__":
     main()
