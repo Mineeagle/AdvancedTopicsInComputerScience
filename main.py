@@ -2,6 +2,7 @@ from cleaned_route_planning import RoutePlanning
 import requests
 from link_sender import LinkSender
 import json
+import datetime
 
 
 def main():
@@ -14,6 +15,7 @@ def main():
     link = rp.get_google_maps_link()
     config_dict["last_response"] = str(LinkSender.send_link(config_dict, link))
     config_dict["last_link"] = link
+    config_dict["last_time_stamp"] = str(datetime.datetime.now())
 
     with open(PATH, "w") as json_file:
         json.dump(config_dict, json_file, indent=4)
