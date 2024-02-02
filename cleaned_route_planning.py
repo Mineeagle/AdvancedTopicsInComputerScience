@@ -14,7 +14,9 @@ class RoutePlanning:
         Please make the import parameter 'kippmuehle' your starting
         and endpoint (coordinates again)
         """
-        self.osm_connector = self._get_osm_graph_connector()
+        self.osm_connector = OSMConnector(
+            (50.991172, 7.123864), "bergischGladbach.graphml", 5000, False
+        )
         self.kippemuehle = kippemuehle
 
     def get_google_maps_link(self):
@@ -22,15 +24,6 @@ class RoutePlanning:
         Returns the google maps link for the route
         """
         return MapsLinksGenerator.get_link(self.kippemuehle, self._get_route())
-
-    def _get_osm_graph_connector(self):
-        """
-        Use the OSMConnector class to allows fetching data from
-        Open Street Maps.
-        """
-        return OSMConnector(
-            (50.991172, 7.123864), "bergischGladbach.graphml", 5000, False
-        )
 
     def _fetch_web_data(self):
         """
@@ -194,4 +187,3 @@ class RoutePlanning:
                 )
 
         return coords_route
-
