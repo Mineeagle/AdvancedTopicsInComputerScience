@@ -40,26 +40,6 @@ class OSMConnector:
             self.graph = ox.add_edge_travel_times(self.graph)
             ox.save_graphml(self.graph, graph_file_path)
 
-    def get_fastest_route(self, origin_coordinates, destination_coordinates):
-        """
-        Returns the graph nodes of the fastest route.
-        """
-        origin_node = self._convert_coordinates_to_node(origin_coordinates)
-        destination_node = self._convert_coordinates_to_node(destination_coordinates)
-        return ox.shortest_path(
-            self.graph, origin_node, destination_node, weigth="travel_time"
-        )
-
-    def get_shortest_route(self, origin_coordinates, destination_coordinates):
-        """
-        Returns the graph nodes of the shortest route.
-        """
-        origin_node = self._convert_coordinates_to_node(origin_coordinates)
-        destination_node = self._convert_coordinates_to_node(destination_coordinates)
-        return ox.shortest_path(
-            self.graph, origin_node, destination_node, weigth="length"
-        )
-
     def get_fastest_time_in_seconds(self, origin_coordinates, destination_coordinates):
         """
         Returns the time needed to drive through the fastest route
