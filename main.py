@@ -13,6 +13,7 @@ def main():
     rp = RoutePlanning(config_dict)
     link = rp.get_google_maps_link()
     config_dict["last_response"] = str(LinkSender.send_link(config_dict, link))
+    config_dict["last_link"] = link
 
     with open(PATH, "w") as json_file:
         json.dump(config_dict, json_file, indent=4)
