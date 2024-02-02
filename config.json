@@ -9,6 +9,7 @@
     "network_type": "drive",
     "central_lcoation_lat": 50.991172,
     "central_lcoation_lon": 7.123864,
+    "_comment": "Under here is just metadata and debugging stuff",
     "last_response": "<Response [200]>",
     "last_link": "https://www.google.com/maps/dir/?api=1&origin=50.982761,7.118816&waypoints=50.9847289,7.1223194|50.9842428,7.1089422|50.9827208,7.1096795|50.9838711,7.1192476|50.982761,7.118816|50.9798778,7.1189576|50.9762587,7.1213779|50.9843256,7.1261781&destination=50.982761,7.118816",
     "last_time_stamp": "2024-02-02 11:40:30.375242"
