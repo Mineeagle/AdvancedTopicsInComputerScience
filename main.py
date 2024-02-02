@@ -8,9 +8,12 @@ def main():
     path = "/home/fawn/Root/dev/advanced_topics_in_cs/AdvancedTopicsInComputerScience/config.json"
     with open(path, "r") as json_file:
         config_dict = json.load(json_file)
-    rp = RoutePlanning()
+    
+
+    rp = RoutePlanning(config_dict)
     link = rp.get_google_maps_link()
     print(LinkSender.send_link(config_dict, link))
+    print(link)
     
 
 if __name__ == "__main__":

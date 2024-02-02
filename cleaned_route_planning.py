@@ -7,17 +7,25 @@ from maps_link_generator import MapsLinksGenerator
 
 
 class RoutePlanning:
-    def __init__(self, kippemuehle=(50.982761, 7.118816)):
+    def __init__(self, config_dict):
         """
         This class is used to calculate the route.
 
         Please make the import parameter 'kippmuehle' your starting
         and endpoint (coordinates again)
         """
+        self.config_dict = config_dict
         self.osm_connector = OSMConnector(
-            (50.991172, 7.123864), "bergischGladbach.graphml", 5000, False
+            location_coordinates=(config_dict["central_lcoation_lat"], config_dict["central_lcoation_lon"]),
+            graph_file_path=config_dict["graph_file_path"],
+            dist=config_dict["dist"],
+            simplify=config_dict["simplify"],
+            network_type=config_dict["network_type"]
         )
-        self.kippemuehle = kippemuehle
+        self.kippemuehle = (
+            config_dict["kippemuehle_lat"],
+            config_dict["kippemuehle_lon"],
+        )
 
     def get_google_maps_link(self):
         """
@@ -29,7 +37,7 @@ class RoutePlanning:
         """
         Fetch data from website to use for the navigation
         """
-        link = "https://altkleider.davidhojczyk.de/api/container/list"
+        link = self.config_dict["container_information_url"]
         result = requests.get(link)
         data_dict = json.loads(str(result.text))
         return data_dict
