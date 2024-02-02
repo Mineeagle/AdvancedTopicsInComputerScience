@@ -1,4 +1,12 @@
 {
-    "maps_link_sending_link":"https://altkleider.davidhojczyk.de/api/route/add"
-    
+    "maps_link_sending_url": "https://altkleider.davidhojczyk.de/api/route/add",
+    "container_information_url": "https://altkleider.davidhojczyk.de/api/container/list",
+    "kippemuehle_lat": 50.982761,
+    "kippemuehle_lon": 7.118816,
+    "graph_file_path": "bergischGladbach.graphml",
+    "dist": 5000,
+    "simplify": false,
+    "network_type": "drive",
+    "central_lcoation_lat": 50.991172,
+    "central_lcoation_lon": 7.123864
 }
