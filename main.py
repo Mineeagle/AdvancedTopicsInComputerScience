@@ -1,6 +1,5 @@
 from route_planning import RoutePlanning
 import requests
-from link_sender import LinkSender
 import json
 import datetime
 import os
@@ -19,7 +18,7 @@ def main():
 
     rp = RoutePlanning(config_dict)
     link = rp.get_google_maps_link()
-    config_dict["last_response"] = str(LinkSender.send_link(config_dict, link))
+    config_dict["last_response"] = str(requests.post(config_dict["maps_link_sending_url"], json={"link": link}))
     config_dict["last_link"] = link
     config_dict["last_time_stamp"] = str(datetime.datetime.now())
 
