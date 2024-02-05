@@ -1,4 +1,4 @@
-from cleaned_route_planning import RoutePlanning
+from route_planning import RoutePlanning
 import requests
 from link_sender import LinkSender
 import json
