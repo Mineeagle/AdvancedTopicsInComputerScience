@@ -3,6 +3,7 @@ import requests
 from link_sender import LinkSender
 import json
 import datetime
+import os
 
 
 def main():
@@ -10,6 +11,11 @@ def main():
     PATH = "/home/fawn/Root/dev/advanced_topics_in_cs/AdvancedTopicsInComputerScience/config.json"
     with open(PATH, "r") as json_file:
         config_dict = json.load(json_file)
+
+    if config_dict["regenerate_graph_file"]:
+        config_dict["regenerate_graph_file"] = False
+        if os.path.exists(config_dict["graph_file_path"]):
+            os.remove(config_dict["graph_file_path"])
 
     rp = RoutePlanning(config_dict)
     link = rp.get_google_maps_link()
