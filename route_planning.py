@@ -16,7 +16,7 @@ class RoutePlanning:
         """
         self.config_dict = config_dict
         self.osm_connector = OSMConnector(
-            location_coordinates=(config_dict["central_lcoation_lat"], config_dict["central_lcoation_lon"]),
+            location_coordinates=(config_dict["central_location_lat"], config_dict["central_location_lon"]),
             graph_file_path=config_dict["graph_file_path"],
             dist=config_dict["dist"],
             simplify=config_dict["simplify"],
