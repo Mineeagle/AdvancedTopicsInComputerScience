@@ -34,7 +34,7 @@ Using this config file, the code can be adapted to fit one's needs:
 |      kippemuehle_lat      | Latitude of the starting point for the vehicle                                                            |
 |      kippemuehle_lon      | Longitude of the starting point for the vehicle                                                           |
 |      graph_file_path      | Path where a graph file will be saved to reuse it later                                                   |
-|           dist            | Distance (in meters) aroud the central location; determines the size of the generated stree graph                     |
+|           dist            | Distance (in meters) around the central location; determines the size of the generated stree graph                     |
 |         simplify          | Whether the generated Graph should be simplified, or stay accurate                                        |
 |       network_type        | For home should the graph be generated; "drive" equals a car mode                                         |
 |   central_lcoation_lat    | Latitude of the central location which is the center of the graph                                         |
