@@ -6,7 +6,6 @@ import os
 
 
 def main():
-
     PATH = "/home/fawn/Root/dev/advanced_topics_in_cs/AdvancedTopicsInComputerScience/config.json"
     with open(PATH, "r") as json_file:
         config_dict = json.load(json_file)
