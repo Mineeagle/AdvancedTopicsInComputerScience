@@ -72,7 +72,7 @@ class RoutePlanning:
 
         !!!
         A few assumptions have been made when it comes to the vehicle:
-        We only use one, and if the amount of stuff to get is above the
+        We only use one, and if the amount of clothes to get from one container is above
         (amount of vehicles * vehicle capacity constant), this calculation breaks.
         !!!
 
