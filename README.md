@@ -1,6 +1,12 @@
 # AdvancedTopicsInComputerScience
 This repo contains some stuff for a module in university. To be more precise, it contains the routeplanning code for the used clothing containers.
 
+---
+
+This repo is archived.
+
+---
+
 # Usage
 Simply put, run the main.py file and the route will be generate and sent to a server. But please change the path in main.py which points to the config.json file.
 
