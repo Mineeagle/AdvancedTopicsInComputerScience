@@ -49,4 +49,4 @@ Using this config file, the code can be adapted to fit one's needs:
 |         _comment          | Just a comment to seperate the two areas                                                                  |
 |       last_response       | Last response from uploading the link to the server                                                       |
 |         last_link         | The last generated link                                                                                   |
-|      last_time_stamp      | Timestamp of the last linn generation                                                                     |
+|      last_time_stamp      | Timestamp of the last link generation                                                                     |
